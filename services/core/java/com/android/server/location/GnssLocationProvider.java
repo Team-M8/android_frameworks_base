@@ -2125,8 +2125,10 @@ public class GnssLocationProvider implements LocationProviderInterface {
                     handleInjectNtpTime();
                     break;
                 case DOWNLOAD_XTRA_DATA:
-                    if (mSupportsXtra) {
-                        handleDownloadXtraData();
+                    Log.d(TAG, "mSupportsXtra = "+mSupportsXtra);
+                    Log.w(TAG, "Setting mSupportsXtra to false!");
+                    if (false) {
+                    handleDownloadXtraData();
                     }
                     break;
                 case INJECT_NTP_TIME_FINISHED:
